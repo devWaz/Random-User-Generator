@@ -1,5 +1,6 @@
 import {  useState } from "react";
 import { useEffect } from "react";
+import { Fade } from "react-awesome-reveal";
 
 
 const Main = () => {
@@ -43,27 +44,26 @@ const Main = () => {
   useEffect(fetchUser, []);
 
 
-console.log(user);
-console.log(isLoading);
-console.log(errorMessage);
     return (
         <div className="main">
           <h1>Random User Generator</h1>
           { isLoading && <div className="whileLoading">Loading....</div> }
           { errorMessage && <div className="whileLoading">{ errorMessage }</div> }
-             <div className="profile"> 
+          <Fade>
+             <div className="profile">  
               {user &&  
               <div className="profile-card">
-                      <img src={avatar} alt="Avatar"/>
+                      <img src={avatar} alt="Avatar"/> 
                       <div>
                         <p>First Name: {firstName}</p>
                         <p>Last Name: {lastName}</p>
                         <p>Age: {age}</p>
-                        <p>Location: {city}, {state}</p>
-                      </div>
-                 </div> }
+                        <p>City: {city}</p>
+                        <p>State: {state}</p>
+                      </div>     
+                 </div> }   
             </div>
-
+            </Fade>
               <button onClick={fetchUser}>New User</button>
         </div>
     );

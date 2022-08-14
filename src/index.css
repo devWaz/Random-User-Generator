@@ -24,12 +24,15 @@ body{
 }
 
 .profile{
-  background-color: white;
-  border: 2px solid black;
+  background-color: rgba(0, 0, 0, 0.849);
+  color: #b1a187;
+  border: 2px solid #b1a187;
   width: 40vw;
   padding: 1rem;
+  margin-top: 2rem;
   font-weight: 600;
   text-align: left;
+  border-radius: 5px;
 }
 
 .profile-card{
@@ -42,6 +45,7 @@ body{
   margin-bottom: 30rem;
   font-size: 70px;
   color: white;
+  text-shadow: 3px 3px rgba(50 , 50 , 70 , 0.5);
 }
 
 .whileLoading{
@@ -49,6 +53,10 @@ body{
   font-weight: 600;
   font-size: 15px;
   color: white;
+  position: absolute;
+  margin-top: -17rem;
+  width: 40vw;
+  text-align: left;
 }
 
 button {
@@ -72,4 +80,51 @@ button:hover{
   border: 1px solid;
   width: 150px;
   height: 150px;
+}
+
+/* small screens */
+@media screen and (max-width:768px) {
+  .main h1{
+    font-size: 50px;
+    margin-bottom: 25rem;
+  }
+
+  .profile {
+    width: 70vw;
+    margin-top: 5rem;
+  }
+
+  img {
+    width: 110px;
+    height: 110px;
+  }
+
+  .profile-card p {
+    line-height: 10px;
+    font-size: 15px;
+  }
+
+  .whileLoading {
+    margin: 0;
+    bottom: 21rem;
+    left: 3rem;
+  }
+}
+
+
+/* Smaller screens */
+@media screen and (max-width:320px) {
+  .main h1 {
+    font-size: 30px;
+  }
+
+  img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .profile-card p {
+    line-height: 9px;
+    font-size: 10px;
+  }
 }
