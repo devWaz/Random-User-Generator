@@ -8,8 +8,10 @@ const Main = () => {
     const [errorMessage , setErrorMessage] = useState(null);
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
-    // const [age, setAge] = useState("");
-    // const [location, setlocation] = useState("");
+    const [age, setAge] = useState("");
+    const [avatar, setAvatar] = useState("");
+    const [city, setCity] = useState("");
+    const [state, setState] = useState("");
 
     const fetchUser = () => {
       fetch('https://randomuser.me/api')
@@ -20,11 +22,15 @@ const Main = () => {
         return res.json();
       })
       .then(data => {
+      setIsLoading(false);
+      setErrorMessage(null);
       setUser(data.results[0]);
       setFirstName(data.results[0].name.first);
       setLastName(data.results[0].name.last);
-      setIsLoading(false);
-      setErrorMessage(null);
+      setAvatar(data.results[0].picture.large)
+      setAge(data.results[0].dob.age)
+      setCity(data.results[0].location.city)
+      setState(data.results[0].location.state)
       })
       .catch(
         err => {
@@ -42,16 +48,18 @@ console.log(isLoading);
 console.log(errorMessage);
     return (
         <div className="main">
-             <div className="profile">
-              { isLoading && <div>Loading....</div> }
-              { errorMessage && <div>{ errorMessage }</div> }
+          <h1>Random User Generator</h1>
+          { isLoading && <div className="whileLoading">Loading....</div> }
+          { errorMessage && <div className="whileLoading">{ errorMessage }</div> }
+             <div className="profile"> 
               {user &&  
               <div className="profile-card">
-                      {/* <img src={user.picture.medium} alt=""/> */}
+                      <img src={avatar} alt="Avatar"/>
                       <div>
                         <p>First Name: {firstName}</p>
                         <p>Last Name: {lastName}</p>
-                        {/* <p>Location: {user.location.city}, {user.location.state}</p> */}
+                        <p>Age: {age}</p>
+                        <p>Location: {city}, {state}</p>
                       </div>
                  </div> }
             </div>
