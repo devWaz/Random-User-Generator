@@ -8,8 +8,6 @@ Link to the live [site](https://wazrandomuser.netlify.app)
 - Error Handling
 - Better understanding of states
 
-### Page Screenshot
-![screenshot](random-user.png)
 
 
 
