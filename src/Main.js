@@ -1,18 +1,9 @@
-import {  useState } from "react";
-import { useEffect } from "react";
-
+import {  useState , useEffect } from "react";
 
 const Main = () => {
     const [user , setUser] = useState();
     const [isLoading , setIsLoading] = useState(true);
     const [errorMessage , setErrorMessage] = useState(null);
-    // const [firstName, setFirstName] = useState("");
-    // const [lastName, setLastName] = useState("");
-    // const [age, setAge] = useState("");
-    // const [avatar, setAvatar] = useState("");
-    // const [city, setCity] = useState("");
-    // const [state, setState] = useState("");
-    console.log(user);
 
     const fetchUser = () => {
       fetch('https://randomuser.me/api')
@@ -26,12 +17,6 @@ const Main = () => {
       setIsLoading(false);
       setErrorMessage(null);
       setUser(data.results[0]);
-      // setFirstName(data.results[0].name.first);
-      // setLastName(data.results[0].name.last);
-      // setAvatar(data.results[0].picture.large)
-      // setAge(data.results[0].dob.age)
-      // setCity(data.results[0].location.city)
-      // setState(data.results[0].location.state)
       })
       .catch(
         err => {
@@ -81,7 +66,6 @@ const Main = () => {
                   </div>    
                  </div> }   
             </div>
-              {/* <button onClick={fetchUser}>New User</button> */}
         </div>
     );
  }
