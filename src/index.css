@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 *{
   border: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  font-family: 'Open Sans', sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Open Sans', sans-serif; */
+  font-family: 'Inter', sans-serif;   
 }
 
 body{
@@ -19,10 +21,11 @@ body{
   display: flex;
   gap: 0;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   flex-direction: column;
   text-align: center;
   transition: 0.4s ease-out;
+  position: relative;
   /* border: 1px solid red; */
 }
 
@@ -32,6 +35,7 @@ body{
   margin-top: 1rem;
   font-size: 70px;
   /* border: 1px solid red; */
+  line-height: 4rem;
   color: white;
   text-shadow: 3px 3px rgba(50 , 50 , 70 , 0.5);
 }
@@ -41,14 +45,15 @@ body{
   color: rgb(104, 102, 102);
   /* border: 2px solid #b1a187; */
   width: 50vw;
-  height: 30vw;
+  height: 33vw;
   min-height: 30vw;
   padding: 1rem;
   /* margin-top: 1rem; */
   font-weight: 600;
   text-align: left;
-  border-radius: 5px;
+  border-radius: 10px;
   transition: 0.4s ease-out;
+  overflow: hidden;
 }
 
 .profile-card {
@@ -94,9 +99,9 @@ body{
 
 .detailsContainer {
   width: 100%;
-  height: 55vh;
+  /* height: 60vh; */
   /* border: 1px solid red; */
-  overflow: scroll;
+  /* overflow: scroll; */
 }
 
 .details {
@@ -117,14 +122,17 @@ button {
 }
 
 .whileLoading{
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
   font-weight: 600;
+  z-index: 100;
   font-size: 15px;
   color: white;
-  position: absolute;
-  margin-top: -19rem;
-  width: 40vw;
   text-align: left;
+}
+
+.message {
+  width: 80%;
+  height: 1.5rem;
 }
 
 button:hover{
@@ -137,18 +145,21 @@ button:hover{
   /* border: 1px solid; */
   width: 200px;
   height: 150px;
+  transition: 0.4s ease-out;
 }
 
 /* small screens */
 @media screen and (max-width:768px) {
   .main h1{
     font-size: 50px;
-    margin-bottom: 25rem;
+    /* margin-bottom: 25rem; */
   }
 
   .profile {
     width: 70vw;
-    margin-top: 5rem;
+    /* margin-top: 5rem; */
+    height: 60vh;
+    /* overflow: scroll; */
   }
 
   img {
@@ -161,27 +172,56 @@ button:hover{
     font-size: 15px;
   }
 
+  .detailsContainer {
+    width: 100%;
+    /* height: 30vh; */
+    /* border: 1px solid red; */
+    overflow-y: scroll;
+  }
+
   .whileLoading {
     margin: 0;
     bottom: 21rem;
     left: 3rem;
+    
   }
 }
 
 
 /* Smaller screens */
-@media screen and (max-width:320px) {
+@media screen and (max-width: 425px) {
   .main h1 {
-    font-size: 30px;
+    font-size: 2.5rem;
+    line-height: 2.2rem;
   }
+
+  /* .main {
+    width: 90vw;
+  } */
 
   img {
     width: 90px;
     height: 90px;
   }
 
+  button {
+    border: none;
+    padding: 7px 10px;
+    font-size: 15px;
+  }
+  
+
+  .profile {
+    /* border: 1px solid red; */
+    width: 85vw;
+  }
+
   .profile-card p {
     line-height: 9px;
     font-size: 10px;
+  }
+
+  .personal h2 {
+    font-size: 1rem;
   }
 }
