@@ -10,6 +10,3 @@ Link to the live [site](https://wazrandomuser.netlify.app)
 
 ### Page Screenshot
 ![screenshot](random-user.png)
-
-
-

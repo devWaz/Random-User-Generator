@@ -14,38 +14,106 @@ body{
 }
 
 .main{
-  height: 95vh;
+  height: 97vh;
+  /* width: 100%; */
   display: flex;
+  gap: 0;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
   text-align: center;
   transition: 0.4s ease-out;
-}
-
-.profile{
-  background-color: rgba(0, 0, 0, 0.849);
-  color: #b1a187;
-  border: 2px solid #b1a187;
-  width: 40vw;
-  padding: 1rem;
-  margin-top: 2rem;
-  font-weight: 600;
-  text-align: left;
-  border-radius: 5px;
-}
-
-.profile-card{
-  display: flex;
-  align-items: center;
+  /* border: 1px solid red; */
 }
 
 .main h1 {
-  position: absolute;
-  margin-bottom: 30rem;
+  /* position: absolute; */
+  margin-bottom: 1rem;
+  margin-top: 1rem;
   font-size: 70px;
+  /* border: 1px solid red; */
   color: white;
   text-shadow: 3px 3px rgba(50 , 50 , 70 , 0.5);
+}
+
+.profile{
+  background-color: white;
+  color: rgb(104, 102, 102);
+  /* border: 2px solid #b1a187; */
+  width: 50vw;
+  height: 30vw;
+  min-height: 30vw;
+  padding: 1rem;
+  /* margin-top: 1rem; */
+  font-weight: 600;
+  text-align: left;
+  border-radius: 5px;
+  transition: 0.4s ease-out;
+}
+
+.profile-card {
+  /* display: flex; */
+  /* border: 1px solid blue; */
+  /* align-items: center; */
+}
+
+/* .personal hr {
+  background-color: #b1a187;
+  color: red;
+} */
+
+.personal {
+  /* border: 1px solid red; */
+  width: 100%;
+  /* padding: 0; */
+}
+
+.personal h2 {
+  border-bottom: 1px solid #ccc;
+  margin: 0;
+  padding-bottom: .7rem;
+}
+
+.personal p {
+  line-height: 15px;
+}
+
+.next {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  /* border: 1px solid red; */
+  height: 3rem;
+  margin-bottom: 10px;
+  /* padding: 0; */
+}
+
+.next h2 {
+  /* border: 1px solid; */
+}
+
+.detailsContainer {
+  width: 100%;
+  height: 55vh;
+  /* border: 1px solid red; */
+  overflow: scroll;
+}
+
+.details {
+  display: flex;
+  /* border: 1px solid red; */
+}
+
+button {
+  border: none;
+  padding: 7px 12px;
+  /* margin-top: 2rem; */
+  font-size: 17px;
+  margin-left: auto;
+  font-weight: 700;
+  border-radius: 5px;
+  background-color: #ccc;
+  cursor: pointer;
 }
 
 .whileLoading{
@@ -54,20 +122,9 @@ body{
   font-size: 15px;
   color: white;
   position: absolute;
-  margin-top: -17rem;
+  margin-top: -19rem;
   width: 40vw;
   text-align: left;
-}
-
-button {
-  border: none;
-  padding: 7px 12px;
-  margin-top: 2rem;
-  font-size: 17px;
-  font-weight: 700;
-  border-radius: 5px;
-  background-color: #ccc;
-  cursor: pointer;
 }
 
 button:hover{
@@ -77,8 +134,8 @@ button:hover{
 
  img {
   margin-right: 1rem;
-  border: 1px solid;
-  width: 150px;
+  /* border: 1px solid; */
+  width: 200px;
   height: 150px;
 }
 

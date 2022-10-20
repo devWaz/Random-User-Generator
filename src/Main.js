@@ -1,6 +1,6 @@
 import {  useState } from "react";
 import { useEffect } from "react";
-import { Fade } from "react-awesome-reveal";
+// import { Fade } from "react-awesome-reveal";
 
 
 const Main = () => {
@@ -49,22 +49,40 @@ const Main = () => {
           <h1>Random User Generator</h1>
           { isLoading && <div className="whileLoading">Loading....</div> }
           { errorMessage && <div className="whileLoading">{ errorMessage }</div> }
-          <Fade>
              <div className="profile">  
               {user &&  
               <div className="profile-card">
+                  <div className="next">
+                    <h2>{firstName} {lastName}</h2>
+                    <button onClick={fetchUser}>New User</button>
+                  </div>
+
+                  <div className="details">
                       <img src={avatar} alt="Avatar"/> 
-                      <div>
-                        <p>First Name: {firstName}</p>
-                        <p>Last Name: {lastName}</p>
-                        <p>Age: {age}</p>
-                        <p>City: {city}</p>
-                        <p>State: {state}</p>
-                      </div>     
+                      <div className="detailsContainer">
+                        <div className="personal">
+                          <h2>Personal Details</h2>
+                          {/* <hr/> */}
+                          <p>First Name: {firstName}</p>
+                          <p>Last Name: {lastName}</p>
+                          <p>Age: {age}</p>
+                          <p>City: {city}</p>
+                          <p>State: {state}</p>
+                        </div> 
+                        <div className="personal">
+                          <h2>Other Details</h2>
+                          {/* <hr/> */}
+                          <p>First Name: {firstName}</p>
+                          <p>Last Name: {lastName}</p>
+                          <p>Age: {age}</p>
+                          <p>City: {city}</p>
+                          <p>State: {state}</p>
+                        </div>
+                      </div>
+                  </div>    
                  </div> }   
             </div>
-            </Fade>
-              <button onClick={fetchUser}>New User</button>
+              {/* <button onClick={fetchUser}>New User</button> */}
         </div>
     );
  }
