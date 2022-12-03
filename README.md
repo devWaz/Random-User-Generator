@@ -6,7 +6,7 @@ Link to the live [site](https://wazrandomuser.netlify.app)
 
 ### What i learnt while doing this project
 - Error Handling
-- Better understanding of states
+- Better understanding of the useState hook
 
 
 
